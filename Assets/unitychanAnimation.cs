@@ -1,8 +1,9 @@
 using UnityEngine;
 
-public class unitychanAnimation : MonoBehaviour
+public class UnitychanAnimation : MonoBehaviour
 {
     [SerializeField] Animator anim;
+    [SerializeField] GameObject player;
     float _time = 0;
     bool _change = true;
     bool _canMove = true;
@@ -54,9 +55,12 @@ public class unitychanAnimation : MonoBehaviour
             {
                 anim.SetBool("Jump", false);
                 anim.SetBool("sliding", false);
-
             }
         }
 
+    }
+    private void FixedUpdate()
+    {
+        transform.position = player.transform.position;
     }
 }

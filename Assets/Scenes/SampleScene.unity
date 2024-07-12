@@ -237,6 +237,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 243076279}
+  - component: {fileID: 243076280}
+  - component: {fileID: 243076281}
+  - component: {fileID: 243076282}
   m_Layer: 0
   m_Name: player
   m_TagString: Untagged
@@ -259,6 +262,73 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &243076280
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 243076278}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 551b8ddf28d2d074aa29787969523247, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _rb: {fileID: 243076281}
+  _speed: 10
+  _buff: 1
+  _jumpP: 1
+  localGravity: {x: 0, y: 0, z: 0}
+--- !u!54 &243076281
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 243076278}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 112
+  m_CollisionDetection: 0
+--- !u!136 &243076282
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 243076278}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.25
+  m_Height: 1.5
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.75, z: 0}
 --- !u!1 &367485310
 GameObject:
   m_ObjectHideFlags: 3
@@ -535,7 +605,7 @@ Transform:
   m_GameObject: {fileID: 963194225}
   serializedVersion: 2
   m_LocalRotation: {x: -0.17490561, y: 0.7046403, z: -0.18617472, w: -0.6619887}
-  m_LocalPosition: {x: 0.87, y: 3.15, z: 0.06}
+  m_LocalPosition: {x: 0, y: 3.15, z: 0.06}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -714,6 +784,7 @@ GameObject:
   - component: {fileID: 2018612919}
   - component: {fileID: 2018612918}
   - component: {fileID: 2018612917}
+  - component: {fileID: 2018612920}
   m_Layer: 6
   m_Name: Virtual Camera
   m_TagString: Untagged
@@ -789,6 +860,23 @@ Transform:
   - {fileID: 367485311}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2018612920
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2018612916}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2fba25a5cd15594e8f050a11e386c80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ConfineMode: 1
+  m_BoundingVolume: {fileID: 1902096870}
+  m_BoundingShape2D: {fileID: 0}
+  m_ConfineScreenEdges: 1
+  m_Damping: 0
 --- !u!137 &5202705892463200177
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
@@ -5354,7 +5442,7 @@ GameObject:
   - component: {fileID: 5202705892467292435}
   - component: {fileID: 5202705892475066300}
   m_Layer: 0
-  m_Name: player
+  m_Name: playerObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8461,6 +8549,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 5202705892467292435}
+  player: {fileID: 243076278}
 --- !u!4 &5202705892475066301
 Transform:
   m_ObjectHideFlags: 0
