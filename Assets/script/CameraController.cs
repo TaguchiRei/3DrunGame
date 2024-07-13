@@ -16,8 +16,6 @@ public class CameraController : MonoBehaviour
     }
     void Update()
     {
-        if (!GameManager.pause)
-        {
             //------カメラの移動------
 
             //プレイヤーの現在地の取得
@@ -49,7 +47,7 @@ public class CameraController : MonoBehaviour
                 // 回転軸はカメラ自身のX軸
                 transform.RotateAround(player.transform.position, transform.right, -my);
             }
-        }
+        
     }
 
 }
