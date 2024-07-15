@@ -8,6 +8,5 @@ public class HealItem : Item
     public override void Use()
     {
         FindObjectOfType<GameManager>().HpFluctuation(heal*-1);
-        Debug.Log("A");
     }
 }

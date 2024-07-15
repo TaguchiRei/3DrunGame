@@ -8,6 +8,5 @@ public class DmgItem : Item
     public override void Use()
     {
         FindObjectOfType<GameManager>().HpFluctuation(_dmg);
-        Debug.Log("A");
     }
 }

@@ -11,16 +11,16 @@ public class Obstacle : MonoBehaviour
     {
         float X = transform.position.x;
         float Z = transform.position.z;
+        float Y = 1.5f;
         if (_shapeType == Type.vertical)
         {
             transform.position = new Vector3 (X, 14.5f, Z);
         }
         else
         {
-            float Y = 1.5f;
             if(_height ==Height.upper)
             {
-                Y = 3;
+                Y = 2.5f;
             }
             transform.position = new Vector3(X, Y, 0);
         }

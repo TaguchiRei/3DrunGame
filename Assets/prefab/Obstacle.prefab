@@ -123,3 +123,5 @@ MonoBehaviour:
   - {fileID: 2100000, guid: 3e279f3ef5990834991ba33aac5c5d55, type: 2}
   - {fileID: 2100000, guid: 671db843855ec00468f179757f331dc3, type: 2}
   meshRenderer: {fileID: 4936395532006252988}
+  _shapeType: 0
+  _height: 1

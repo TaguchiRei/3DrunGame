@@ -9,6 +9,10 @@ public abstract class Item : MonoBehaviour, IPause
     [SerializeField] float _rotateSpeed = 1f;
     public bool _pause = false;
     public abstract void Use();
+    void Start()
+    {
+        transform.position = new Vector3(transform.position.x,0.5f,transform.position.z);
+    }
     private void Update()
     {
         if (!_pause)
