@@ -63,7 +63,8 @@ public class GameManager : MonoBehaviour
             PauseResume();
             start = false;
             SceneManager.LoadScene("unitychanRun");
-        }else
+        }
+        else
         {
             H.DOFillAmount(Hp / MaxHp, 0.2f);
         }
